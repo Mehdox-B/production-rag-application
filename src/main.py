@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from dotenv import load_dotenv
-load_dotenv(".env.dev")
+from helpers.config import get_settings
+# load_dotenv(".env.dev")
+
+settings = get_settings()
 
 from src.routes.base import base_router
 
